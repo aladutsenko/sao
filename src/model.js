@@ -1256,8 +1256,9 @@
                 }
                 var field = this.model.fields[name];
                 var value = this._values[name];
-                var context_descriptor = Object.getOwnPropertyDescriptor(
-                    value, 'context');
+                var context_descriptor = {};
+                // var context_descriptor = Object.getOwnPropertyDescriptor(
+                //     value, 'context');
                 if (!value || !context_descriptor.set) {
                     continue;
                 }
